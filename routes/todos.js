@@ -3,7 +3,7 @@ var express = require('express')
     , mongoose = require('mongoose')
     , Todo = require('../models/Todo.js');
 
-/* GET /todos listing. */
+/* GET /todos listing. (Get all if nothing specified). */
 router.get('/', function(req, res, next) {
   Todo.find(function (err, todos) {
     if (err) return next(err);
